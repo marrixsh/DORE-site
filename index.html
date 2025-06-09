@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DORÉ</title>
+
+  <!-- Шрифти з Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+
+  <!-- CSS-стилі -->
+  <link rel="stylesheet" href="visual.css">
+</head>
+<body>
+
+  <!-- 🔝 Header -->
+  <header>
+    <nav class="navbar">
+        <a href="index.html" class="logo">DORÉ</a>
+      <ul class="nav-menu">
+        <li class="dropdown">
+          <a href="#">Послуги ▼ </a>
+          <ul class="dropdown-menu">
+            <li><a href="hair.html">Волосся</a></li>
+            <li><a href="nails.html">Нігті</a></li>
+            <li><a href="face.html">Обличчя</a></li>
+            <li><a href="massage.html">Масаж</a></li>
+          </ul>          
+        </li>
+        <li><a href="#about">Про нас</a></li>
+        <li><a href="#signup" class="signup-btn">Записатися</a>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="images/hero.jpg" alt="DORÉ Hero">
+    <div class="hero-overlay">
+      <blockquote class="decorative-text">Краса не потребує підтвердження</blockquote>
+      <button class="hero-button">Переглянути більше</button>
+    </div>
+  </section>
+
+  <!-- ✨ Про нас -->
+  <section class="about" id="about">
+    <div class="about-content">
+      <div class="about-text">
+        <h2>Про нас</h2>
+        <p>
+          Ми не розповідаємо про себе.<br>
+          Нас відчувають з порогу.<br>
+          DORÉ — простір тиші, дотику, світла.<br>
+          Тут не потрібно кричати, щоб бути почутою.
+        </p>
+      </div>
+      <div class="about-image"></div>
+    </div>
+  </section>
+
+  <!-- 📋 Послуги -->
+  <section class="services-preview">
+    <div class="service-block" style="background-image: url('images/hair.jpg');">
+      <div class="service-title">
+        <div>Волосся</div>
+        <small>Розкіш, яка закладена в кожне пасмо.</small>
+      </div>
+    </div>
+    <div class="service-block" style="background-image: url('images/nails.jpg');">
+      <div class="service-title">
+        <div>Нігті</div>
+        <small>Доглянутість, яку не потрібно доводити.</small>
+      </div>
+    </div>
+    <div class="service-block" style="background-image: url('images/face.jpg');">
+      <div class="service-title">
+        <div>Обличчя</div>
+        <small>Те, що бачать першими. Те, що запам’ятовують.</small>
+      </div>
+    </div>
+    <div class="service-block" style="background-image: url('images/massage.jpg');">
+      <div class="service-title">
+        <div>Масаж</div>
+        <small>Спокій, який починається з дотику.</small>
+      </div>
+    </div>
+  </section>
+
+  
+  
+
+  <!-- 📅 Форма запису -->
+  <section class="signup" id="signup">
+    <div class="signup-content">
+      <div class="signup-message">Час для себе — найцінніший.</div>
+      <form>
+        <input type="text" placeholder="Ім’я" required>
+        <input type="tel" placeholder="Номер телефону" required>
+        <input type="text" placeholder="Послуга">
+        <input type="datetime-local" placeholder="Бажана дата/час">
+        <button type="submit">Надіслати</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- 🧾 Footer -->
+  <footer>
+    <div class="footer-main">
+      <div><strong>DORÉ</strong><br>вул. Рейтарська 17, Київ</div>
+      <div class="footer-col">
+      <a href="tel:+380979333339">+380 (97) 93 33 39</a><br>
+      <a href="https://instagram.com/dore.kyiv" target="_blank">Instagram</a> </div>
+    <div class="footer-legal">
+      <small><a href="#">Політика конфіденційності</a> / <a href="#">Оферта</a></small>
+    </div>
+  </footer>
+
+</body>
+</html>

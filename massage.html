@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Послуги — Масаж | DORÉ</title>
+  <link rel="stylesheet" href="../visual.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Libre+Baskerville&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div class="navbar">
+        <a href="index.html" class="logo">DORÉ</a>
+      <ul class="nav-menu">
+        <li class="dropdown">
+          <a href="#">Послуги ▼</a>
+          <ul class="dropdown-menu">
+            <li><a href="hair.html">Волосся</a></li>
+            <li><a href="nails.html">Нігті</a></li>
+            <li><a href="face.html">Обличчя</a></li>
+            <li><a href="massage.html">Масаж</a></li>
+          </ul>
+        </li>
+        <li><a href="../about.html">Про нас</a></li>
+        <li><a href="../#signup" class="signup-btn">Записатися</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="services-category">
+    <h1>Масаж</h1>
+
+    <div class="services-list">
+      <div class="service-row">
+        <span class="service-name">Релакс-масаж</span>
+        <span class="service-price">від 1300₴</span>
+      </div>
+      <div class="service-row">
+        <span class="service-name">Антистрес масаж</span>
+        <span class="service-price">від 1400₴</span>
+      </div>
+      <div class="service-row">
+        <span class="service-name">Лімфодренаж</span>
+        <span class="service-price">від 1500₴</span>
+      </div>
+      <div class="service-row">
+        <span class="service-name">Масаж спини</span>
+        <span class="service-price">від 900₴</span>
+      </div>
+    </div>
+  </main>
+
+  <section class="signup">
+    <form class="booking-form" action="/send-booking" method="POST">
+      <input type="text" name="name" placeholder="Ім’я" required />
+      <input type="tel" name="phone" placeholder="Телефон" required />
+      <select name="service">
+        <option disabled selected>Оберіть послугу</option>
+        <option>Релакс-масаж</option>
+        <option>Антистрес масаж</option>
+        <option>Лімфодренаж</option>
+        <option>Масаж спини</option>
+      </select>
+      <input type="date" name="date" />
+      <button type="submit">Записатися</button>
+    </form>
+  </section>
+</body>
+</html>

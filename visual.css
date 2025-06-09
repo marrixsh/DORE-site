@@ -1,0 +1,470 @@
+/* 🪄 Шрифти */
+@font-face {
+    font-family: 'Butler';
+    src: url('fonts/Butler_Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  
+  /* 🎨 Змінні кольорів і шрифтів */
+  :root {
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-script: 'Great Vibes', cursive;
+    --font-body: 'Lora', serif;
+  
+    --color-creme: #FAF7F3;
+    --color-warm-white: #F4EFE9;
+    --color-soft-gold: #C7A76C;
+    --color-dark-gold: #917B50;
+    --color-deep-wine: #5E3A37;
+    --color-charcoal: #333333;
+    --color-overlay: rgba(0, 0, 0, 0.4);
+  }
+  
+  /* 🔧 Загальні стилі */
+  body {
+    margin: 0;
+    font-family: 'Lora', serif;
+    background-color: var(--color-creme);
+    color: var(--color-charcoal);
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Butler', serif;
+    font-weight: normal;
+  }
+  
+  .decorative-text {
+    font-family: var(--font-script);
+  }
+  
+  
+ 
+  /* 🔝 Header */
+  header {
+    background-color: var(--color-warm-white);
+    padding: 20px 40px;
+  }
+  
+  .logo {
+    color: var(--color-deep-wine);
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    text-decoration: none;
+      
+  }
+  
+  .navbar {
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    padding: 0;
+    margin: 0;
+  }
+  .nav-menu a {
+    text-decoration: none;
+    color: var(--color-charcoal);
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .signup-btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: var(--color-deep-wine);
+    border: 1.5px solid var(--color-deep-wine);
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .signup-btn:hover {
+    background-color: var(--color-deep-wine);
+    color: white;
+  }
+  
+  /* Стилі для dropdown */
+.dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: var(--color-warm-white);
+    padding: 10px 20px;
+    list-style: none;
+    top: 100%;
+    right: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 10;
+    border-radius: 6px;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown-menu li {
+    margin: 6px 0;
+  }
+  
+  .dropdown-menu a {
+    color: var(--color-charcoal);
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+  
+  .dropdown-menu a:hover {
+    color: var(--color-dark-gold);
+  }
+  
+  /* Hero */
+  .hero {
+    position: relative;
+  height: 100vh;
+  overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  .hero-overlay {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 60px;
+    max-width: 90%;
+    font-size: 3.5rem;
+    line-height: 1.4;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .hero-button {
+    width: 100%;
+    padding: 16px 28px;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-top: 24px;
+    background-color: transparent;
+    color: var(--color-deep-wine);
+    border: 1.5px solid var(--color-deep-wine);
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    transition: all 0.3s ease;
+  }
+
+  .hero-button:hover {
+    background-color: var(--color-deep-wine);
+    color: white;
+  }
+  
+  /* Про нас */
+  .about {
+    background-color: var(--color-warm-white);
+    padding: 60px 40px;
+  }
+  
+  .about-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  
+  .about-text {
+    flex: 1;
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
+  
+  .about-image {
+    flex: 1;
+    background-image: url('gallery.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+  }
+  
+  /* Послуги */
+ .services-preview {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 60px 40px;
+}
+
+.service-block {
+  position: relative;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.service-block:hover {
+  transform: scale(1.02);
+}
+
+.service-title {
+    position: relative;
+    z-index: 2;
+    width: 80%;
+    min-height: 90px;
+    font-family: var(--font-heading);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 14px 20px;
+    border-radius: 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+  
+  
+  .service-title div {
+    font-size: 1.5rem;
+    transition: transform 0.4s ease;
+  }
+  
+  .service-title small {
+    font-size: 0.85rem;
+    margin-top: 8px;
+    font-family: var(--font-body);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  
+  /* Ефект при наведенні */
+  .service-block:hover .service-title {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .service-block:hover .service-title div {
+    transform: translateY(-12px);
+  }
+  
+  .service-block:hover .service-title small {
+    opacity: 1;
+  }
+  
+  
+
+  #hair { background-image: url('hair.jpg'); }
+  #nails { background-image: url('nails.jpg'); }
+  #face { background-image: url('face.jpg'); }
+  #massage { background-image: url('massage.jpg'); }
+  
+  /* 📅 Форма */
+  .signup {
+    background-color: var(--color-creme);
+    padding: 60px 40px;
+  }
+  
+  .signup-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
+  }
+  
+  .signup-message {
+    flex: 1;
+    font-family: var(--font-script);
+    font-size: 3.5rem;
+  }
+  
+  .signup form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .signup input, .signup button {
+    padding: 10px;
+    font-size: 1rem;
+    font-family: var(--font-body);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    color: var(--color-charcoal);
+  }
+  
+  .signup input::placeholder {
+    color: #999;
+    font-style: italic;
+  }
+  
+  .signup input:focus {
+    border-color: var(--color-dark-gold);
+  }
+  
+  .signup button {
+    background-color: var(--color-soft-gold);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--color-warm-white);
+    color: var(--color-deep-wine);
+    padding: 40px 20px;
+    font-size: 0.9rem;
+  }
+  footer a {
+    color: var(--color-charcoal); /* або будь-який з палітри */
+    text-decoration: none;
+  }
+  footer a:hover {
+    color: var(--color-dark-gold);
+    text-decoration: underline;
+  }
+  
+  .footer-main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .footer-legal {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .footer-legal a {
+    color: var(--color-dark-gold);
+  }
+
+
+  
+
+  
+  /* 🧾 Сторінка з переліком послуг */
+.service-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 24px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+  }
+  
+  /* 🔽 Стиль select */
+select {
+    font-family: var(--font-body); /* або var(--font-heading) */
+    font-size: 1rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    color: var(--color-charcoal);
+    background-color: white;
+  }
+  
+  select:focus {
+    outline: none;
+    border-color: var(--color-dark-gold);
+  }
+  
+  
+  /* 🎞️ Анімація появи рядків */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .service-row {
+    animation: fadeUp 0.6s ease both;
+  }
+  
+  .service-row:nth-of-type(1) { animation-delay: 0.1s; }
+.service-row:nth-of-type(2) { animation-delay: 0.2s; }
+.service-row:nth-of-type(3) { animation-delay: 0.3s; }
+.service-row:nth-of-type(4) { animation-delay: 0.4s; }
+.services-category {
+    padding: 60px 40px;
+  }
+  
+  .services-category h1 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  
+  .services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .service-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-warm-white);
+    padding: 16px 24px;
+    border-radius: 10px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .service-row:nth-of-type(even) {
+    background-color: transparent;
+  }
+  
+  .service-name {
+    font-weight: 500;
+  }
+  
+  .service-price {
+    white-space: nowrap;
+  }
+  
+  
